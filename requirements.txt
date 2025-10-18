@@ -1,0 +1,12 @@
+# Machine Learning Libraries
+pandas>=1.3.0
+numpy>=1.21.0
+scikit-learn>=1.0.0
+xgboost>=1.5.0
+joblib>=1.1.0
+
+# Deployment and UI Libraries
+streamlit>=1.18.0
+
+# Optional: For World Bank Data retrieval (if not using CSV/Excel download)
+# wbgapi>=1.0.0

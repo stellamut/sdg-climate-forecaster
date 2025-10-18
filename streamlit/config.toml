@@ -1,0 +1,27 @@
+# ==============================================================================
+# CELL 4: CREATE STREAMLIT CONFIGURATION FILES
+# ==============================================================================
+
+CONFIG_DIR = '.streamlit'
+CONFIG_PATH = os.path.join(CONFIG_DIR, 'config.toml')
+
+os.makedirs(CONFIG_DIR, exist_ok=True)
+
+# Streamlit Configuration File (config.toml)
+config_content = """
+[theme]
+# Primary brand colors (Lime Green, Dark Green, Peach, Golden Yellow)
+primaryColor="#9ACD32" 
+backgroundColor="#FDF9F3" 
+secondaryBackgroundColor="#F8F8F8" 
+textColor="#1A431A" 
+font="sans serif" # We'll override this to Futura in the app.py CSS
+
+[server]
+runOnSave = true
+"""
+
+with open(CONFIG_PATH, 'w') as f:
+    f.write(config_content)
+    
+print(f"✅ Created Streamlit configuration at: {CONFIG_PATH}")
